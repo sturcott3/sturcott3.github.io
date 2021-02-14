@@ -7,18 +7,102 @@
 
     <link rel="stylesheet" href="./back_end/styles.css" />
 
+    <!--jQuery from CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <title>Sam Turcotte's Resume</title>
+    <!--Animation/Navigation controller-->
+    <script src="./back_end/animations.js"></script>
+
+    <title>Sam Turcotte | Interactive Resume</title>
   </head>
 
   <body>
-    <div class="content-block">testing</div>
+    <nav id="main-nav" class="nav-container">
+      <ul class="nav-list">
+        <li class="nav-item"><a onclick="goToHome()">Home</a></li>
+        <span class="nav-separator">|</span>
+        <li class="nav-item"><a onclick="goToTech()">Tech</a></li>
+        <span class="nav-separator">|</span>
+        <li class="nav-item"><a onclick="goToSchool()">Education</a></li>
+        <span class="nav-separator">|</span>
+        <li class="nav-item"><a onclick="goToWork()">Work</a></li>
+        <span class="nav-separator">|</span>
+        <li class="nav-item"><a onclick="goToProjects()">Projects</a></li>
+        <span class="nav-separator">|</span>
+        <li class="nav-item"><a onclick="goToGoals()">Goals</a></li>
+      </ul>
+    </nav>
 
-    <script>
-      $(document).ready(() => {
-        $(".content-block").hide();
-      });
-    </script>
+    <div id="greeting-block" class="content-block welcome-block">
+      <img
+        class="greeting-image"
+        src="./back_end/images/me.jpg"
+        alt="Hi, I'm Sam Turcotte"
+      />
+      <h3 class="welcome-block-message">Hi! I'm Sam.</h3>
+      <p class="welcome-block-message">
+        Thanks for taking the time to check out my interactive resume! Before
+        you get started, I'd like to ask a couple of questions.
+        <br /><br />
+        This site won't store any information about your computer or your
+        responses after you close the window. No cookies! Imagine that.
+        <br /><br />
+        You can also just use the navigation links at the top to see information
+        about me in the default configuration.
+      </p>
+      <button
+        id="first-accept"
+        class="user-input-button"
+        onclick="fireIntroQuestions()"
+      >
+        OK?
+      </button>
+    </div>
+
+    <div id="intro-questions-1" class="content-block welcome-block">
+      <p class="welcome-block-message">
+        First, I'd like to know a bit about your background so I can inform what
+        language I should use to describe myself. What is your role?
+      </p>
+
+      <button
+        id="first-accept"
+        class="user-input-button"
+        onclick="setupTechLanguage()"
+      >
+        <strong>I'm a tech lead.</strong><br />
+        You can show me code and talk in detail about technologies.
+      </button>
+
+      <button
+        id="first-accept"
+        class="user-input-button"
+        onclick="setupPlainLanguage()"
+      >
+        <strong>I'm in HR.</strong><br />
+        You should try to keep things in plain english.
+      </button>
+      <button
+        id="first-accept"
+        class="user-input-button"
+        onclick="setupMixedLanguage()"
+      >
+        <strong>A little of both.</strong><br />
+        You can talk about some technology details, but stay away from code
+        samples.
+      </button>
+    </div>
+
+    <footer id="footer-nav" class="nav-container">
+      <ul class="nav-list">
+        <li class="nav-item"><a onclick="goToAbout()">About This Site</a></li>
+        <span class="nav-separator">|</span>
+        <li class="nav-item">
+          <a href="https://github.com/sturcott3/sturcott3.github.io"
+            >Source Code</a
+          >
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

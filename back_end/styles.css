@@ -1,11 +1,231 @@
+/*Starting points for backgrounds created using https://www.gradientmagic.com/
+They are not responsible for any of the breaking changes I make! */
+
+/*Direct on elements------------------*/
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: repeating-linear-gradient(
+      45deg,
+      hsla(207, 0%, 63%, 0.05) 0px,
+      hsla(207, 0%, 63%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(207, 0%, 63%, 0.05) 11px,
+      hsla(207, 0%, 63%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(207, 0%, 63%, 0.05) 0px,
+      hsla(207, 0%, 63%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(207, 0%, 63%, 0.05) 11px,
+      hsla(207, 0%, 63%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      hsla(207, 0%, 63%, 0.05) 0px,
+      hsla(207, 0%, 63%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(207, 0%, 63%, 0.05) 11px,
+      hsla(207, 0%, 63%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsla(207, 0%, 63%, 0.05) 0px,
+      hsla(207, 0%, 63%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(207, 0%, 63%, 0.05) 11px,
+      hsla(207, 0%, 63%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    linear-gradient(90deg, rgb(17, 17, 17), rgb(66, 66, 66));
 }
+h3 {
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/*End elements------------------*/
+
+/*Navigation------------------*/
+.nav-container {
+  width: 100%;
+  color: white;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-image: repeating-linear-gradient(
+      45deg,
+      hsla(207, 0%, 63%, 0.05) 0px,
+      hsla(207, 0%, 63%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(207, 0%, 63%, 0.05) 11px,
+      hsla(207, 0%, 63%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(207, 0%, 63%, 0.05) 0px,
+      hsla(207, 0%, 63%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(207, 0%, 63%, 0.05) 11px,
+      hsla(207, 0%, 63%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      hsla(207, 0%, 63%, 0.05) 0px,
+      hsla(207, 0%, 63%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(207, 0%, 63%, 0.05) 11px,
+      hsla(207, 0%, 63%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsla(207, 0%, 63%, 0.05) 0px,
+      hsla(207, 0%, 63%, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      hsla(207, 0%, 63%, 0.05) 11px,
+      hsla(207, 0%, 63%, 0.05) 12px,
+      transparent 12px,
+      transparent 32px
+    ),
+    linear-gradient(90deg, rgb(17, 17, 17), rgb(66, 66, 66));
+}
+.nav-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.nav-item {
+  display: inline;
+}
+.nav-separator {
+  padding: 1%;
+}
+#main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#footer-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/*End Navigation------------------*/
+
+/*Re-usable classes------------------*/
 .content-block {
-  height: 50%;
-  width: 80%;
-  background-color: blue;
+  border-radius: 10px;
+  margin-top: 75px;
 }
+.welcome-block {
+  width: 75%;
+  background-image: repeating-linear-gradient(
+      188deg,
+      hsla(171, 0%, 87%, 0.12) 0px,
+      hsla(171, 0%, 87%, 0.12) 2px,
+      transparent 2px,
+      transparent 5px,
+      hsla(171, 0%, 87%, 0.12) 5px,
+      hsla(171, 0%, 87%, 0.12) 7px,
+      transparent 7px,
+      transparent 9px,
+      hsla(171, 0%, 87%, 0.12) 9px,
+      hsla(171, 0%, 87%, 0.12) 11px
+    ),
+    repeating-linear-gradient(
+      162deg,
+      hsla(171, 0%, 87%, 0.12) 0px,
+      hsla(171, 0%, 87%, 0.12) 2px,
+      transparent 2px,
+      transparent 5px,
+      hsla(171, 0%, 87%, 0.12) 5px,
+      hsla(171, 0%, 87%, 0.12) 7px,
+      transparent 7px,
+      transparent 14px,
+      hsla(171, 0%, 87%, 0.12) 14px,
+      hsla(171, 0%, 87%, 0.12) 16px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(171, 0%, 87%, 0.15) 0px,
+      hsla(171, 0%, 87%, 0.15) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(171, 0%, 87%, 0.15) 1px,
+      hsla(171, 0%, 87%, 0.15) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(171, 0%, 87%, 0.15) 5px,
+      hsla(171, 0%, 87%, 0.15) 8px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsla(171, 0%, 87%, 0.15) 0px,
+      hsla(171, 0%, 87%, 0.15) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(171, 0%, 87%, 0.15) 1px,
+      hsla(171, 0%, 87%, 0.15) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(171, 0%, 87%, 0.15) 5px,
+      hsla(171, 0%, 87%, 0.15) 8px
+    ),
+    linear-gradient(90deg, rgb(251, 251, 251), rgb(251, 251, 251));
+}
+.welcome-block-message {
+  color: rgba(66, 66, 66, 0.9);
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.greeting-image {
+  margin-top: 20px;
+  border-radius: 50%;
+  height: 100px;
+  width: auto;
+}
+.user-input-button {
+  padding: 5px;
+  margin: 20px;
+  min-width: 75px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(22, 22, 22, 0.9);
+  color: white;
+}
+/*End Re-usable ------------------*/
+
+/*Single use styles------------------*/
+#intro-questions-1 {
+}
+
+/*End single-use------------------*/
