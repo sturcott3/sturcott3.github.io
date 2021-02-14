@@ -1,4 +1,4 @@
-# sturcott3.github.io
+# The Resume of Sam Turcotte
 
 Personal Resume, always in-progress. I feel like this version of the idea is finally fully-formed enough to really get started.
 
