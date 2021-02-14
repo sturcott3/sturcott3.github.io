@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!--Animation/Navigation controller-->
-    <script src="./back_end/nav_animations.js"></script>
+    <script src="./back_end/nav_controller.js"></script>
 
     <title>Sam Turcotte | Interactive Resume</title>
   </head>
@@ -59,13 +59,13 @@
       </button>
     </div>
 
-    <div id="intro-questions-1" class="content-block welcome-block">
-      <p class="welcome-block-message">
+    <div id="intro-questions-1" class="content-block">
+      <p class="direct-message">
         First, I'd like to know a bit about your background so I can inform how
         I talk about myself. Which of the following best describes you?
       </p>
 
-      <div class="user-response-block">
+      <div class="user-response-block welcome-block">
         <p class="welcome-block-message">
           <strong>Developer/Tech Lead.</strong><br />
           I'll show code samples and talk in detail about technologies I'm
@@ -80,7 +80,7 @@
         </button>
       </div>
 
-      <div class="user-response-block">
+      <div class="user-response-block welcome-block">
         <p class="welcome-block-message">
           <strong>HR rep or Manager</strong><br />
           I'll keep things to plain english, and focus more on soft skills and
@@ -96,7 +96,7 @@
         </button>
       </div>
 
-      <div class="user-response-block">
+      <div class="user-response-block welcome-block">
         <p class="welcome-block-message">
           <strong>In Between?</strong><br />
           I'll talk about some technologies and some experience but stay away
@@ -116,12 +116,16 @@
 
     <footer id="footer-nav" class="nav-container">
       <ul class="nav-list">
-        <li class="nav-item"><a onclick="goToAbout()">About This Site</a></li>
+        <li class="nav-item"><a onclick="goToAbout()">About</a></li>
         <span class="nav-separator">|</span>
         <li class="nav-item">
           <a href="https://github.com/sturcott3/sturcott3.github.io"
-            >Source Code</a
+            >Site Source</a
           >
+        </li>
+        <span class="nav-separator">|</span>
+        <li class="nav-item">
+          <a href="">PDF Resume</a>
         </li>
       </ul>
     </footer>

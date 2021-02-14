@@ -62,6 +62,9 @@ a {
   text-decoration: none;
   color: white;
 }
+strong {
+  padding-bottom: 5px;
+}
 /*End elements------------------*/
 
 /*Navigation------------------*/
@@ -148,9 +151,12 @@ a {
 .content-block {
   width: 85%;
   border-radius: 10px;
-  margin-top: 75px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .welcome-block {
+  margin-top: 10px;
+  border-radius: 10px;
   background-image: repeating-linear-gradient(
       188deg,
       hsla(171, 0%, 87%, 0.12) 0px,
@@ -211,8 +217,11 @@ a {
   padding-left: 4%;
   padding-right: 4%;
 }
+.direct-message {
+  color: rgb(182, 182, 252);
+  font-size: 1.2em;
+}
 .greeting-image {
-  margin-top: 20px;
   border-radius: 50%;
   height: 100px;
   width: auto;
@@ -231,6 +240,9 @@ a {
 /*End Re-usable ------------------*/
 
 /*Single use styles------------------*/
+#greeting-block {
+  margin-top: 55px;
+}
 #intro-questions-1 {
 }
 
