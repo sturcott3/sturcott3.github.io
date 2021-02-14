@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!--Animation/Navigation controller-->
-    <script src="./back_end/animations.js"></script>
+    <script src="./back_end/nav_animations.js"></script>
 
     <title>Sam Turcotte | Interactive Resume</title>
   </head>
@@ -61,37 +61,58 @@
 
     <div id="intro-questions-1" class="content-block welcome-block">
       <p class="welcome-block-message">
-        First, I'd like to know a bit about your background so I can inform what
-        language I should use to describe myself. What is your role?
+        First, I'd like to know a bit about your background so I can inform how
+        I talk about myself. Which of the following best describes you?
       </p>
 
-      <button
-        id="first-accept"
-        class="user-input-button"
-        onclick="setupTechLanguage()"
-      >
-        <strong>I'm a tech lead.</strong><br />
-        You can show me code and talk in detail about technologies.
-      </button>
+      <div class="user-response-block">
+        <p class="welcome-block-message">
+          <strong>Developer/Tech Lead.</strong><br />
+          I'll show code samples and talk in detail about technologies I'm
+          familiar with.
+        </p>
+        <button
+          id="dev-user-choice"
+          class="user-input-button"
+          onclick="setupDevUser()"
+        >
+          select
+        </button>
+      </div>
 
-      <button
-        id="first-accept"
-        class="user-input-button"
-        onclick="setupPlainLanguage()"
-      >
-        <strong>I'm in HR.</strong><br />
-        You should try to keep things in plain english.
-      </button>
-      <button
-        id="first-accept"
-        class="user-input-button"
-        onclick="setupMixedLanguage()"
-      >
-        <strong>A little of both.</strong><br />
-        You can talk about some technology details, but stay away from code
-        samples.
-      </button>
+      <div class="user-response-block">
+        <p class="welcome-block-message">
+          <strong>HR rep or Manager</strong><br />
+          I'll keep things to plain english, and focus more on soft skills and
+          past experience.
+        </p>
+
+        <button
+          id="normal-user-choice"
+          class="user-input-button"
+          onclick="setupNormalUser()"
+        >
+          select
+        </button>
+      </div>
+
+      <div class="user-response-block">
+        <p class="welcome-block-message">
+          <strong>In Between?</strong><br />
+          I'll talk about some technologies and some experience but stay away
+          from code/jargon.
+        </p>
+
+        <button
+          id="savvy-user-choice"
+          class="user-input-button"
+          onclick="setupSavvyUser()"
+        >
+          select
+        </button>
+      </div>
     </div>
+    <div class="spacer"></div>
 
     <footer id="footer-nav" class="nav-container">
       <ul class="nav-list">

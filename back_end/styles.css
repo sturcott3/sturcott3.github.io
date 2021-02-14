@@ -142,12 +142,15 @@ a {
 /*End Navigation------------------*/
 
 /*Re-usable classes------------------*/
+.spacer {
+  height: 100px;
+}
 .content-block {
+  width: 85%;
   border-radius: 10px;
   margin-top: 75px;
 }
 .welcome-block {
-  width: 75%;
   background-image: repeating-linear-gradient(
       188deg,
       hsla(171, 0%, 87%, 0.12) 0px,
@@ -204,6 +207,7 @@ a {
 }
 .welcome-block-message {
   color: rgba(66, 66, 66, 0.9);
+  padding-top: 5px;
   padding-left: 4%;
   padding-right: 4%;
 }
@@ -215,12 +219,14 @@ a {
 }
 .user-input-button {
   padding: 5px;
-  margin: 20px;
   min-width: 75px;
   border: none;
   border-radius: 5px;
   background-color: rgba(22, 22, 22, 0.9);
   color: white;
+}
+.user-response-block {
+  padding: 10px;
 }
 /*End Re-usable ------------------*/
 
