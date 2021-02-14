@@ -8,7 +8,7 @@ The project is very basic, and the only dependency is jQuery, which is accessed 
 
 ## Deployment
 
-This site is currently deployed using [GitHub%Pages](https://pages.github.com/). You can follow the instructions here to get started, then copy this repo and start changing the content to your own stuff.
+This site is currently deployed using [GitHub Pages](https://pages.github.com/). You can follow the instructions here to get started, then copy this repo and start changing the content to your own stuff.
 
 ## Built With
 
