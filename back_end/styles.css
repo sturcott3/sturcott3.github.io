@@ -73,51 +73,7 @@ strong {
   color: white;
   padding-bottom: 5px;
   padding-top: 5px;
-  background-image: repeating-linear-gradient(
-      45deg,
-      hsla(207, 0%, 63%, 0.05) 0px,
-      hsla(207, 0%, 63%, 0.05) 1px,
-      transparent 1px,
-      transparent 11px,
-      hsla(207, 0%, 63%, 0.05) 11px,
-      hsla(207, 0%, 63%, 0.05) 12px,
-      transparent 12px,
-      transparent 32px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      hsla(207, 0%, 63%, 0.05) 0px,
-      hsla(207, 0%, 63%, 0.05) 1px,
-      transparent 1px,
-      transparent 11px,
-      hsla(207, 0%, 63%, 0.05) 11px,
-      hsla(207, 0%, 63%, 0.05) 12px,
-      transparent 12px,
-      transparent 32px
-    ),
-    repeating-linear-gradient(
-      135deg,
-      hsla(207, 0%, 63%, 0.05) 0px,
-      hsla(207, 0%, 63%, 0.05) 1px,
-      transparent 1px,
-      transparent 11px,
-      hsla(207, 0%, 63%, 0.05) 11px,
-      hsla(207, 0%, 63%, 0.05) 12px,
-      transparent 12px,
-      transparent 32px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      hsla(207, 0%, 63%, 0.05) 0px,
-      hsla(207, 0%, 63%, 0.05) 1px,
-      transparent 1px,
-      transparent 11px,
-      hsla(207, 0%, 63%, 0.05) 11px,
-      hsla(207, 0%, 63%, 0.05) 12px,
-      transparent 12px,
-      transparent 32px
-    ),
-    linear-gradient(90deg, rgb(17, 17, 17), rgb(66, 66, 66));
+  background-color: rgba(66, 66, 66, 0.5);
 }
 .nav-list {
   width: 100%;
@@ -130,7 +86,7 @@ strong {
   display: inline;
 }
 .nav-separator {
-  padding: 1%;
+  padding: 0.25%;
 }
 #main-nav {
   position: fixed;
@@ -153,6 +109,7 @@ strong {
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
+  display: none;
 }
 .welcome-block {
   margin-top: 10px;
@@ -219,11 +176,11 @@ strong {
 }
 .direct-message {
   color: rgb(182, 182, 252);
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .greeting-image {
   border-radius: 50%;
-  height: 100px;
+  height: 75px;
   width: auto;
 }
 .user-input-button {
@@ -237,6 +194,9 @@ strong {
 .user-response-block {
   padding: 10px;
 }
+.intro-redirect {
+  display: none;
+}
 /*End Re-usable ------------------*/
 
 /*Single use styles------------------*/
@@ -244,6 +204,7 @@ strong {
   margin-top: 55px;
 }
 #intro-questions-1 {
+  margin-top: 15px;
 }
 
 /*End single-use------------------*/

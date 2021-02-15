@@ -13,10 +13,20 @@
     <!--Animation/Navigation controller-->
     <script src="./back_end/nav_controller.js"></script>
 
+    <!--Text Data Source-->
+    <script src="./back_end/data.js"></script>
+
     <title>Sam Turcotte | Interactive Resume</title>
   </head>
 
   <body>
+    <noscript
+      >This site requires Javascript to function. Please enable JavaScript in
+      your browser settings to view the site or visit me on
+      <a href="www.linkedin.com/in/samuel-turcotte">Linkedin</a> or
+      <a href="https://github.com/sturcott3">GitHub</a>.</noscript
+    >
+
     <nav id="main-nav" class="nav-container">
       <ul class="nav-list">
         <li class="nav-item"><a onclick="goToHome()">Home</a></li>
@@ -36,33 +46,37 @@
     <div id="greeting-block" class="content-block welcome-block">
       <img
         class="greeting-image"
-        src="./back_end/images/me.jpg"
+        src="./back_end/resources/me.jpg"
         alt="Hi, I'm Sam Turcotte"
       />
       <h3 class="welcome-block-message">Hi! I'm Sam.</h3>
       <p class="welcome-block-message">
         Thanks for taking the time to check out my interactive resume! Before
-        you get started, I'd like to ask a couple of questions.
+        you get started, I'd like to ask a couple of quick questions.
         <br /><br />
         This site won't store any information about your computer or your
         responses after you close the window. No cookies! Imagine that.
         <br /><br />
-        You can also just use the navigation links at the top to see information
-        about me in the default configuration.
+        You can skip the questionnaire by using the navigation links at the top.
+        On large devices you can also find a static PDF version of my resume at
+        the bottom right of the page.
       </p>
       <button
         id="first-accept"
         class="user-input-button"
-        onclick="fireIntroQuestions()"
+        onclick="showIntroQuestion_1()"
       >
-        OK?
+        Start
       </button>
     </div>
+
+    <div id="home-block" class="content-block"></div>
 
     <div id="intro-questions-1" class="content-block">
       <p class="direct-message">
         First, I'd like to know a bit about your background so I can inform how
-        I talk about myself. Which of the following best describes you?
+        technical the language I use should be. Which of the following best
+        describes you?
       </p>
 
       <div class="user-response-block welcome-block">
@@ -112,8 +126,127 @@
         </button>
       </div>
     </div>
-    <div class="spacer"></div>
 
+    <div id="intro-questions-2" class="content-block">
+      <p class="direct-message">
+        Next, what kind of information about me are you most interested in?
+      </p>
+
+      <div class="user-response-block welcome-block">
+        <p class="welcome-block-message">
+          <strong>Soft Skills</strong><br />
+          I'll prioritize showing you the attitude and work ethic I can bring to
+          your organization.
+        </p>
+        <button
+          id="soft-skills-info-choice"
+          class="user-input-button"
+          onclick="prioritizeSoftSkills()"
+        >
+          select
+        </button>
+      </div>
+
+      <div class="user-response-block welcome-block">
+        <p class="welcome-block-message">
+          <strong>Technical Ability</strong><br />
+          I'll direct you straight to a list of the technologies I'm familiar
+          with, and to some samples of my work.
+        </p>
+
+        <button
+          id="technical-info-choice"
+          class="user-input-button"
+          onclick="prioritizeTechnical()"
+        >
+          select
+        </button>
+      </div>
+
+      <div class="user-response-block welcome-block">
+        <p class="welcome-block-message">
+          <strong>Work History</strong><br />
+          I'll focus on trying to show how my years working in remote access
+          settings can translate to a new career as a developer.
+        </p>
+
+        <button
+          id="work-history-info-choice"
+          class="user-input-button"
+          onclick="prioritizeWorkHistory()"
+        >
+          select
+        </button>
+      </div>
+    </div>
+
+    <div id="intro-questions-result" class="content-block">
+      <br />
+      <p class="direct-message">
+        Thanks for your responses! Everything is set up now, so you can use the
+        navigation to browse as much as you like. Based on what you chose, I
+        think that you'll find some good places to start below.
+      </p>
+      <br />
+
+      <a id="home-redirect" class="intro-redirect" onclick="goToHome()">
+        <div class="user-response-block welcome-block">
+          <p class="welcome-block-message">
+            Start by reading a quick few paragraphs about me: Past, present, and
+            goals for the future.<br /><br />
+            <strong>Summary and Introduction >></strong><br />
+          </p>
+        </div>
+      </a>
+
+      <a id="tech-redirect" class="intro-redirect" onclick="goToTech()">
+        <div class="user-response-block welcome-block">
+          <p class="welcome-block-message">
+            Go straight to the list of technologies I've learned to see if I
+            have what your organization needs.<br /><br />
+            <strong>Technology Breakdown >></strong><br />
+          </p>
+        </div>
+      </a>
+      <a id="school-redirect" class="intro-redirect" onclick="goToSchool()">
+        <div class="user-response-block welcome-block">
+          <p class="welcome-block-message">
+            Let me tell you about what I gained from my time as a student and
+            tutor at Confederation College.<br /><br />
+            <strong>School Highlights >></strong><br />
+          </p>
+        </div>
+      </a>
+      <a id="work-redirect" class="intro-redirect" onclick="goToWork()">
+        <div class="user-response-block welcome-block">
+          <p class="welcome-block-message">
+            View a summary of my work history, and see an exhaustive list of
+            roles I've held.<br /><br />
+            <strong>Work History >></strong><br />
+          </p>
+        </div>
+      </a>
+      <a id="projects-redirect" class="intro-redirect" onclick="goToProjects()">
+        <div class="user-response-block welcome-block">
+          <p class="welcome-block-message">
+            A gallery of past projects as well as a rundown of what I'm working
+            on right now.<br /><br />
+            <strong>Projects Page >></strong><br />
+          </p>
+        </div>
+      </a>
+      <a id="goals-redirect" class="intro-redirect" onclick="goToGoals()">
+        <div class="user-response-block welcome-block">
+          <p class="welcome-block-message">
+            See how I plan to pursue my professional development over the next
+            few years.<br /><br />
+            <strong>Goals List >></strong><br />
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="spacer"></div>
     <footer id="footer-nav" class="nav-container">
       <ul class="nav-list">
         <li class="nav-item"><a onclick="goToAbout()">About</a></li>
@@ -125,7 +258,11 @@
         </li>
         <span class="nav-separator">|</span>
         <li class="nav-item">
-          <a href="">PDF Resume</a>
+          <a
+            href="./back_end/resources/Resume_Samuel_Turcotte_2021-02-14.pdf"
+            download
+            >PDF Resume</a
+          >
         </li>
       </ul>
     </footer>
